@@ -19,7 +19,7 @@ const Customizer = () => {
           <>
             <motion.div
              key="custom"
-             className='absolute top-0 left-0 z-10'
+             className='absolute top-80 left-0 z-10'
              {...slideAnimation('left')} 
             >
               <div className='flix item-center min-h-screen'>
@@ -34,6 +34,33 @@ const Customizer = () => {
                 </div>
               </div>
             </motion.div>
+
+            <motion.div
+              className="absolute z-10 top-5 right-5"
+              {...fadeAnimation}
+            >
+              <CustomButton
+                type="filled"
+                title="Go back"
+                handleClick={() => state.intro = true}
+                cusustomStyles="w-fit px-4 py-2.5 font-bold text-sm"
+              />
+            </motion.div>
+
+            <motion.div
+              className='filtertabs-container'
+              {...slideAnimation('up')}
+            >
+              {FilterTabs.map((tab) => (
+                <Tab 
+                  key={tab.name}
+                  tab={tab}
+                  isFilterTab
+                  isActiveTab=""
+                  handleClick={() => {}}
+                />
+              ))}            
+             </motion.div>
           </>
         )}
       </AnimatePresence>
