@@ -14,7 +14,6 @@ const Shirt = () => {
   const logoTexture = useTexture(snap.logoDecal);
   const fullTexture = useTexture(snap.fullDecal);
 
-  //lambert1 insted of lamber1 (old code i think)
   useFrame((state,delta) => easing.dampC(materials.lambert1.color,snap.color,0.25,delta));
   
   const stateString = JSON.stringify(snap);

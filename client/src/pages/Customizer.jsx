@@ -12,6 +12,10 @@ import { AIPicker, ColorPicker, CustomButton, FilePicker, Tab } from '../compone
 
 const Customizer = () => {
   const snap = useSnapshot(state);
+
+  //show tab content depending on the activeTab
+  //1:20:00 bakki type here
+  
   return (
     <div>
       <AnimatePresence>
